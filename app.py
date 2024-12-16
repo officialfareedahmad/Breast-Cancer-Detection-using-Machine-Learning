@@ -24,7 +24,7 @@ def predict():
     np_features = np.asarray(features_list,dtype=np.float32)
     pred = model.predict(np_features.reshape(1,-1))
 
-    output = ["cancerous" if pred[0] == 1 else "not cancerous"]
+    output = ["Cancerous" if pred[0] == 1 else "not Cancerous"]
 
     return render_template('index.html' , message = output)
 
